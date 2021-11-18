@@ -14,6 +14,7 @@ export const LocationContextProvider = ({ children }) => {
     setIsLoading(true);
     setKeyword(searchKeyword);
   };
+
   useEffect(() => {
     if (!keyword.length) {
       // don't do anything
@@ -30,6 +31,7 @@ export const LocationContextProvider = ({ children }) => {
         setError(err);
       });
   }, [keyword]);
+
   return (
     <LocationContext.Provider
       value={{
